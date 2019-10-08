@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+logging:
+  config: classpath:logback-boot.xml
+
+feign:
+  httpclient:
+    enabled: true
+  client:
+    default:
+      connectTimeout: 60000
+      readTimeout: 60000
+
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 600000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetries: 3 #对当前实例的重试次数
+  ServerListRefreshInterval: 5000

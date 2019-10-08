@@ -14,6 +14,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>mitail-user</module>
+        <module>mitail-comment</module>
+        <module>mitail-test</module>
     </modules>
 
     <properties>
@@ -23,6 +25,7 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
         <!--Greenwich.RELEASE-->
         <nacos.version>0.2.2.RELEASE</nacos.version>
+        <lombok.version>1.18.2</lombok.version>
     </properties>
 
     <dependencies>
@@ -94,6 +97,23 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <!-- <scope>provided</scope> -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
 
     </dependencies>
