@@ -1,6 +1,5 @@
 package com.mitail.comment;
 
-import com.netflix.hystrix.exception.HystrixBadRequestException;
 import feign.Response;
 import feign.Util;
 import feign.codec.ErrorDecoder;
@@ -12,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 import java.io.IOException;
 
 @Slf4j
-public class NotBreakerConfiguration {
+public class FeignConfiguration {
 
     @Bean
     public ErrorDecoder errorDecoder() {
@@ -23,6 +22,7 @@ public class NotBreakerConfiguration {
      */
     public class UserErrorDecoder implements ErrorDecoder {
         private Logger logger = LoggerFactory.getLogger(getClass());
+
         @Override
         public Exception decode(String methodKey, Response response) {
             Exception exception = null;

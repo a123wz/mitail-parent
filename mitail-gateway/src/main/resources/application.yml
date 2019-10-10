@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      routes:
+        - id: mitail-user
+          uri: lb://mitail-user
+          predicates:
+            - Path=/f/**
+          filters:
+            - RewritePath=/f/(?<segment>.*), /$\{segment}
+logging:
+  config: classpath:logback-boot.xml
+
+feign:
+  httpclient:
+    enabled: true
+  client:
+    default:
+      connectTimeout: 60000
+      readTimeout: 60000
+
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 600000
+  OkToRetryOnAllOperations: true
+  MaxAutoRetries: 3 #对当前实例的重试次数
+  ServerListRefreshInterval: 5000
+
+---
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: elapse_route
+#          uri: lb://mitail-user
+##          uri: http://httpbin.org:80/get
+#          predicates:
+#            - Path=/f/**
+#          filters:
+#            - RewritePath=/f/(?<segment>.*), /$\{segment}
+#  profiles: elapse_route
