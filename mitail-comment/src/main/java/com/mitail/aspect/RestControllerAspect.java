@@ -39,8 +39,10 @@ public class RestControllerAspect {
 	@Bean
 	public RequestInterceptor headerInterceptor() {
 		return template -> {
-			String flow_no = RequestContextUtil.getResponse().getHeader(HeadConstant.FLOW_NO);
-			template.header(HeadConstant.FLOW_NO, flow_no);
+			String flow_no = RequestContextUtil.getRequest().getHeader(HeadConstant.FLOW_NO);
+			if(!StringUtils.isEmpty(flow_no)) {
+				template.header(HeadConstant.FLOW_NO, flow_no);
+			}
 		};
 	}
 
@@ -59,12 +61,11 @@ public class RestControllerAspect {
 		String flow_no = RequestContextUtil.getRequest().getHeader(HeadConstant.FLOW_NO);
 		if(!StringUtils.isEmpty(flow_no)){
 			Thread.currentThread().setName(flow_no);
-		}else{
+		}/*else{
 			flow_no = "bs-"+System.currentTimeMillis();
 			Thread.currentThread().setName(flow_no);
-//			RequestContextUtil.getRequest().
 			RequestContextUtil.getResponse().setHeader(HeadConstant.FLOW_NO,flow_no);
-		}
+		}*/
 		MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 		Method method = signature.getMethod();
 
