@@ -1,17 +1,13 @@
 package com.mitail.aspect;
 
-import java.lang.reflect.Method;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.google.common.collect.Lists;
 import com.mitail.constant.HeadConstant;
 import com.mitail.util.RequestContextUtil;
 import feign.RequestInterceptor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -19,17 +15,12 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.google.common.collect.Lists;
-
-import lombok.extern.slf4j.Slf4j;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Method;
+import java.util.List;
 
 @Slf4j
 @Aspect
@@ -61,11 +52,7 @@ public class RestControllerAspect {
 		String flow_no = RequestContextUtil.getRequest().getHeader(HeadConstant.FLOW_NO);
 		if(!StringUtils.isEmpty(flow_no)){
 			Thread.currentThread().setName(flow_no);
-		}/*else{
-			flow_no = "bs-"+System.currentTimeMillis();
-			Thread.currentThread().setName(flow_no);
-			RequestContextUtil.getResponse().setHeader(HeadConstant.FLOW_NO,flow_no);
-		}*/
+		}
 		MethodSignature signature = (MethodSignature) joinPoint.getSignature();
 		Method method = signature.getMethod();
 
