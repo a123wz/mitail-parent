@@ -1,12 +1,8 @@
 package com.mitail;
 
 
-import com.mitail.gateway.filter.Request1TimeTestFilter;
-import com.mitail.gateway.filter.RequestTimeGatewayFilterFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.gateway.support.NameUtils;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class GatewayApplication {
