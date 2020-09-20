@@ -1,6 +1,6 @@
-package com.mitail.enums;
+package com.mitail.base.enums;
 
-import com.mitail.base.Message;
+import com.mitail.base.model.Message;
 
 public enum ResultCode implements Message {
 

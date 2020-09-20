@@ -1,4 +1,4 @@
-package com.mitail.data.converter;
+package com.mitail.base.data.converter;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -9,7 +9,7 @@ import java.util.List;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class DateConverterConfig implements Converter<String, Date> {
 
     private static final List<String> formarts = new ArrayList<>(4);

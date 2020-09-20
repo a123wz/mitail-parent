@@ -1,4 +1,4 @@
-package com.mitail.config;
+package com.mitail.base;
 
 import feign.Response;
 import feign.Util;

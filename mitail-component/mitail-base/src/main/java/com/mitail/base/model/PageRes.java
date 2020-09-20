@@ -1,4 +1,5 @@
-package com.mitail.base;
+/*
+package com.mitail.model;
 
 import java.util.List;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -27,10 +28,12 @@ public class PageRes<T> {
 //    @ApiModelProperty("记录集合")
     private List<T> list;
 
-    /**
+    */
+/**
      * page 封装
      * @param page
-     */
+     *//*
+
     public PageRes(IPage<T> page) {
         this.count = page.getTotal();
         this.page = page.getCurrent()+1;
@@ -46,10 +49,4 @@ public class PageRes<T> {
         this.pageSize = page.getSize();
     }
 
-//    public void setPageInfo(ResPageInfo pageInfo){
-//        this.count = pageInfo.getCount();
-//        this.page = pageInfo.getPage();
-//        this.pageCount = pageInfo.getPageCount();
-//        this.pageSize = pageInfo.getPageSize();
-//    }
-}
+}*/

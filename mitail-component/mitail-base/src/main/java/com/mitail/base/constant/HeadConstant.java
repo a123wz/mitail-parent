@@ -1,4 +1,4 @@
-package com.mitail.constant;
+package com.mitail.base.constant;
 
 public class HeadConstant {
 

@@ -1,11 +1,11 @@
-package com.mitail.aspect;
+package com.mitail.base.aspect;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.google.common.collect.Lists;
-import com.mitail.constant.HeadConstant;
-import com.mitail.util.RequestContextUtil;
+import com.mitail.base.constant.HeadConstant;
+import com.mitail.base.util.RequestContextUtil;
 import feign.RequestInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

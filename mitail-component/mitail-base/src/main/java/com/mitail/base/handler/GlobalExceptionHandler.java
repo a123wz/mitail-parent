@@ -1,22 +1,19 @@
-package com.mitail.handler;
+package com.mitail.base.handler;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.ConstraintViolationException;
-
-import com.mitail.base.Result;
-import com.mitail.enums.ResultCode;
-import com.mitail.util.ParamInvlidUtil;
+import com.mitail.base.enums.ResultCode;
+import com.mitail.base.model.Result;
+import com.mitail.base.util.ParamInvlidUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 
@@ -26,7 +23,6 @@ import java.util.List;
  * @author zhumaer
  * @since 8/31/2017 3:00 PM
  */
-@RestController
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {

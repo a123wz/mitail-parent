@@ -1,4 +1,4 @@
-package com.mitail.util;
+package com.mitail.base.util;
 
 import java.util.List;
 import java.util.Set;

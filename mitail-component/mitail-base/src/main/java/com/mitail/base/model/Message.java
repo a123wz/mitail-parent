@@ -1,4 +1,4 @@
-package com.mitail.base;
+package com.mitail.base.model;
 
 public interface Message {
 

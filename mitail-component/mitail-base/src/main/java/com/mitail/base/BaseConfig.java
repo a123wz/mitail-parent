@@ -1,15 +1,18 @@
-package com.mitail.config;
+package com.mitail.base;
+
+
+import org.hibernate.validator.HibernateValidator;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
-import org.hibernate.validator.HibernateValidator;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
 @Configuration
-public class ValidatorConfiguration {
+@ComponentScan({"com.mitail.base"})
+public class BaseConfig {
 
     @Bean
     public Validator validator(){

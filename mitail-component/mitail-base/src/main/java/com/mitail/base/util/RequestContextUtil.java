@@ -1,4 +1,4 @@
-package com.mitail.util;
+package com.mitail.base.util;
 
 import org.springframework.web.context.ContextLoader;
 import org.springframework.web.context.request.RequestContextHolder;
