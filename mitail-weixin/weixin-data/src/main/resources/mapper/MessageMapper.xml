@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mitail.weixin.mapper.MessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mitail.weixin.entity.Message">
+        <id column="id" property="id" />
+        <result column="send_uid" property="sendUid" />
+        <result column="receive_uid" property="receiveUid" />
+        <result column="send_date" property="sendDate" />
+        <result column="read_date" property="readDate" />
+        <result column="message" property="message" />
+        <result column="isread" property="isread" />
+    </resultMap>
+
+</mapper>
