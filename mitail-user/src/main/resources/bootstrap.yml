@@ -2,7 +2,7 @@ server:
   port: 8762
 spring:
   application:
-    name: mitail-user
+    name: mitail-test
   cloud:
     nacos:
       discovery:

@@ -14,6 +14,7 @@
     <modules>
         <module>mitail-swagger</module>
         <module>mitail-base</module>
+        <module>mitail-mybatis</module>
     </modules>
 
 

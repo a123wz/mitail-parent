@@ -1,6 +1,5 @@
 package com.mitail.user.controller;
 
-import com.alibaba.nacos.api.config.annotation.NacosValue;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class UserController {
 
-    @Value("${test.s}")
+    @Value("${test.s:1}")
     private String value;
 
     @GetMapping("/hi")

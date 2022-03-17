@@ -16,5 +16,11 @@ ribbon:
   ReadTimeout: 600000
   ConnectTimeout: 600000
   OkToRetryOnAllOperations: true
-  MaxAutoRetries: 3 #对当前实例的重试次数
+  MaxAutoRetries: 0 #对当前实例的重试次数
   ServerListRefreshInterval: 5000
+
+swagger:
+  title: test
+  pack: com.mitail
+  description: test111
+  version: 2.0

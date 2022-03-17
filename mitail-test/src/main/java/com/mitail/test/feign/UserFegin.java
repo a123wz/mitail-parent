@@ -1,7 +1,7 @@
 package com.mitail.test.feign;
 
 
-import com.mitail.comment.FeignConfiguration;
+import com.mitail.base.FeignConfiguration;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,13 +1,12 @@
-package com.mitail.base.data.converter;
+package com.mitail.base.converter;
+
+import org.springframework.core.convert.converter.Converter;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import org.springframework.core.convert.converter.Converter;
-import org.springframework.stereotype.Component;
 
 //@Component
 public class DateConverterConfig implements Converter<String, Date> {

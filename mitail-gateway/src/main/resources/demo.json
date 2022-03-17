@@ -1,0 +1,34 @@
+[{
+  "id": "mitail-test",
+  "uri": "lb://mitail-test",
+  "predicates": [{
+    "name": "Path",
+    "args": {
+      "0": "/t1/**"
+    }
+  }],
+  "filters": [{
+    "name": "StripPrefix",
+    "args": {
+      "parts": "1"
+    }
+  }]
+}]
+
+
+[{
+  "id": "mitail-test",
+  "uri": "lb://mitail-test",
+  "predicates": [{
+    "name": "Path",
+    "args": {
+      "0": "/t1/**"
+    }
+  }],
+  "filters": [{
+    "name": "StripPrefix",
+    "args": {
+      "parts": "1"
+    }
+  }]
+}]

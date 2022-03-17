@@ -1,4 +1,4 @@
-package com.mitail;
+package com.mitail.user.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

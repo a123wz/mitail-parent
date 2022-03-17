@@ -14,17 +14,13 @@ spring:
             - Path=/f/**
           filters:
             - StripPrefix=1
-        - id: mitail-test
-          uri: lb://mitail-test
-          predicates:
-            - Path=/t/**
-          filters:
-            - RewritePath=/t/(?<segment>.*), /$\{segment}
-#        - id: host_route
-#            uri: http://httpbin.org:80/get
-#            predicates:
-#              - Host=**.fangzhipeng.com #请求头中含有Host为fangzhipeng.com的请求将会被路由转发转发到配置的uri
-#              - Method=GET #所有的GET类型的请求都会路由转发到配置的uri
+#        - id: mitail-test
+#          uri: lb://mitail-test
+#          predicates:
+#            - Path=/t/**
+#          filters:
+#            - RewritePath=/t/(?<segment>.*), /$\{segment}
+
 
 
 logging:

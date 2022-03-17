@@ -1,15 +1,14 @@
 package com.mitail.base.util;
 
-import java.util.List;
-import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-
+import com.google.common.collect.Lists;
 import lombok.Data;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import com.google.common.collect.Lists;
+
+import javax.validation.ConstraintViolation;
+import java.util.List;
+import java.util.Set;
 
 public class ParamInvlidUtil {
 

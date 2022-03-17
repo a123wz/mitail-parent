@@ -1,5 +1,5 @@
 /*
-package com.mitail.model;
+package com.mitail.base.model;
 
 import java.util.List;
 import com.baomidou.mybatisplus.core.metadata.IPage;

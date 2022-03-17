@@ -22,13 +22,13 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
-            <artifactId>mitail-comment</artifactId>
+            <artifactId>mitail-swagger</artifactId>
             <groupId>com.mitail</groupId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
