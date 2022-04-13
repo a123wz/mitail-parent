@@ -125,7 +125,7 @@
     </dependencies>
 
     <dependencyManagement>
-        <dependencies>
+        <!--<dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -133,7 +133,18 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+        </dependencies>-->
+
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2021.0.1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
 
 </project>
